@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+void positive(int table[]){
+    int* pointeur;
+    int j = 0;
+    int cleanList[10];
+    pointeur = &table[0];
+    for(int i = 0;*(pointeur+i) != NULL;i++){
+        if(*(pointeur+i) >= 0){
+            cleanList[j] = *(pointeur+i);
+        j++;
+        }
+    }
+    printf("Les nombre positife :");
+    for(int i = 0;cleanList[i] != NULL;i++){
+        printf(" %d ",cleanList[i]);
+    }
+    }
+int main()
+{
+    int list[10] = {10,2,3,-3,-2,-5,12,-2,2,-1};
+    positive(list);
+    return 0;
+}
